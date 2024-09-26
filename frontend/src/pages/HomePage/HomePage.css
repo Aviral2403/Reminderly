@@ -1,0 +1,279 @@
+/* Container styles */
+.home-container {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  background-color: #181e27;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Main heading */
+.main-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+/* Highlight text */
+.highlight {
+  color: #e51d48;
+}
+
+/* Section for the content row */
+.content-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Left content column */
+.content-col {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Section heading */
+.section-heading {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e51d48;
+}
+
+/* Description text */
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #e2e2e2;
+}
+
+/* Button styles */
+.primary-btn {
+  background-color: #e51d48;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Features section */
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+/* Feature column */
+.feature-col {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Feature card styles */
+.feature-card {
+  background-color: #243039;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e51d48;
+}
+
+/* Card description */
+.card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Footer heading */
+.footer-heading {
+  font-size: 1.8rem;
+  margin-top: 50px;
+  color: #e51d48;
+}
+
+/* Footer description */
+.footer-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+}
+
+/* Highlight text */
+.highlight {
+  color: #e51d48;
+}
+
+/* Section for the content row */
+.content-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column; /* Stack the elements vertically on smaller screens */
+    align-items: center;
+  }
+}
+
+/* Left content column */
+.content-col {
+  flex: 1;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Section heading */
+.section-heading {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #e51d48;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.5rem; /* Reduce font size on smaller screens */
+  }
+}
+
+/* Description text */
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #e2e2e2;
+}
+
+@media (max-width: 768px) {
+  .description {
+    font-size: 1rem;
+  }
+}
+
+/* Button styles */
+.primary-btn {
+  background-color: #e51d48;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Features section */
+.features-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .features-row {
+    flex-direction: column; /* Stack feature columns vertically on smaller screens */
+  }
+}
+
+/* Feature column */
+.feature-col {
+  flex: 1;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .feature-col {
+    margin-bottom: 20px; /* Add space between stacked columns on smaller screens */
+  }
+}
+
+/* Feature card styles */
+.feature-card {
+  background-color: #243039;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  height: 100%;
+}
+
+/* Card title */
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e51d48;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Card description */
+.card-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card-description {
+    font-size: 0.95rem;
+  }
+  .feature-card{
+    width: 80%;
+    margin: auto;
+  }
+}
+
+/* Footer heading */
+.footer-heading {
+  font-size: 1.8rem;
+  margin-top: 50px;
+  color: #e51d48;
+}
+
+@media (max-width: 768px) {
+  .footer-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Footer description */
+.footer-description {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .footer-description {
+    font-size: 1rem;
+  }
+}

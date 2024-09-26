@@ -1,0 +1,183 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem;
+  width: 100vw;
+  background-color: #23272b;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.left .logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem!important;
+  color: white;
+  height: 7vh;
+  margin-left: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.left .logo:hover{
+  transform: scale(1.2);
+
+}
+
+.logo a {
+  color: #e51d48;
+  font-size: 28px!important;
+  
+}
+
+.logo .code {
+  color: white; /* Or light grey: #D3D3D3 */
+}
+
+.logo .algo {
+  color: #e51d48;
+  font-style: italic; /* Optional: to add emphasis */
+  font-weight: bold; /* Optional: to make it stand out */
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  text-align: center;
+}
+
+.right button {
+  color: whitesmoke;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  height: 4vh;
+  width: 6vw;
+  min-width: 100px;
+  max-width: 150px;
+  background-color: rgb(225, 29, 72);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.right .navContent{
+  color: #e51d48;
+  font-size: 16px;
+  text-decoration: none;
+
+  
+}
+.right .navContent:hover{
+  color: whitesmoke;
+  font-size: 16px;
+  text-decoration: none;
+
+  
+}
+.right button:hover {
+  background-color: #e05454;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+/* Menu that appears after clicking the hamburger */
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: rgba(95, 95, 95, 0.75);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+.right button .login{
+  text-decoration: inherit;
+}
+.login-btn{
+  color: inherit;
+  text-decoration: none;
+}
+.login-btn a{
+  color: inherit;
+  text-decoration: none;
+
+}
+
+@media (max-width: 576px) {
+  /* Center the hamburger icon */
+  .right {
+    display: flex;
+    justify-content: center; /* Center align the hamburger or login button */
+    align-items: center;
+  }
+
+  .menu {
+    display: none; /* Hide the menu initially */
+  }
+
+  .hamburger {
+    display: flex; /* Show the hamburger on smaller screens */
+  }
+
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navContent {
+    padding: 8px 0;
+    text-decoration: none;
+
+
+  }
+
+  /* Center the login button */
+  .right button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* This centers the button */
+    text-decoration: none;
+
+  }
+}

@@ -1,0 +1,77 @@
+
+.event {
+  width: 100%; 
+  border-width: 10px 4px 4px 4px;
+  border-style: solid;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column; 
+  margin-top: .6rem;
+  margin-bottom: .6rem;
+  /* Remove any fixed height if it exists */
+}
+
+.event-container {
+  background-color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; 
+  /* Remove row-gap, let the children manage spacing */
+  width: 100%; /* Ensure it takes up full width */
+  /* Remove any fixed height if it exists */
+}
+
+.event-date-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem; /* Add spacing here instead of row-gap */
+}
+.event .event-container .event-actions .edit-delete-buttons .edit-btn,
+.event .event-container .event-actions .edit-delete-buttons .delete-btn{
+  color: black;
+}
+
+.event-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align title and buttons to top */
+  margin-bottom: 0.8rem; /* Add spacing here */
+}
+
+.event-title {
+  white-space: normal;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  flex: 1; /* Allow title to grow and shrink */
+  min-width: 0; /* Prevent title from shrinking too much */
+  margin-right: 1rem; /* Add space between title and buttons */
+}
+
+.edit-delete-buttons {
+  display: flex;
+  column-gap: 0.3rem;
+  cursor: pointer;
+  color: black;
+  white-space: nowrap; /* Prevent buttons from wrapping */ 
+}
+
+.event-desc {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 0.8rem; /* Add spacing */
+}
+
+.event-status {
+  font-weight: bold;
+  color: #0f0101;
+}
+
+.event-passed {
+  color: #ff0000b3;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  border-radius: 8px;
+}

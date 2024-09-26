@@ -1,0 +1,10 @@
+.container{
+    background-color: #181e27;
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    perspective: 100rem;
+    overflow: hidden;
+
+}
