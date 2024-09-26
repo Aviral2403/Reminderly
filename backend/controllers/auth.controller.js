@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 const User = require("../models/User");
-const generateTokenAndSetCookie = require("../utils/generateTokenandsetCookie"); // Correct import
+const generateTokenAndSetCookie = require("../utils/generateTokenAndSetCookie"); // Correct import
 const { sendVerificationEmail, sendWelcomeEmail, sendPasswordResetEmail, sendResetSuccessEmail } = require("../mailtrap/emails");
 
 const signup = async (req, res) => {
