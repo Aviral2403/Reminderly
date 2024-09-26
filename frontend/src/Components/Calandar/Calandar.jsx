@@ -72,7 +72,7 @@ const Calandar = ({ user }) => {
     if (user?._id) {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/events/user/${user._id}/upcoming`
+          `https://reminderly.onrender.com/api/events/user/${user._id}/upcoming`
         );
         const sortedEvents = response.data.sort((a, b) => {
           const dateA = new Date(a.startDate + " " + a.startTime);
@@ -146,7 +146,7 @@ const Calandar = ({ user }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/events/create`,
+        `https://reminderly.onrender.com/api/events/create`,
         newEvent
       );
       alert("Event added successfully!");
@@ -165,7 +165,7 @@ const Calandar = ({ user }) => {
   const handleDeleteEvent = async (eventId) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        await axios.delete(`http://localhost:8000/api/events/${eventId}`);
+        await axios.delete(`https://reminderly.onrender.com/api/events/${eventId}`);
         setEvents(events.filter((event) => event._id !== eventId));
         fetchUpcomingEvents();
       } catch (error) {

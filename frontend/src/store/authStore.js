@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/api/auth";
+const API_URL = "https://reminderly.onrender.com/api/auth";
 axios.defaults.withCredentials = true; // Ensures cookies are sent with requests
 
 export const useAuthStore = create((set) => ({

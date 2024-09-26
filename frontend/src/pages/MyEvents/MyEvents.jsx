@@ -17,7 +17,7 @@ const MyEvents = () => {
     if (userId) {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/events/user/${userId}`
+          `https://reminderly.onrender.com/api/events/user/${userId}`
         );
         const sortedEvents = sortEventsByDate(response.data);
         setEvents(sortedEvents);
@@ -55,7 +55,7 @@ const MyEvents = () => {
   const handleDeleteEvent = async (eventId) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        await axios.delete(`http://localhost:8000/api/events/${eventId}`);
+        await axios.delete(`https://reminderly.onrender.com/api/events/${eventId}`);
         setEvents(events.filter((event) => event._id !== eventId));
       } catch (error) {
         console.error("Error deleting event:", error);
@@ -66,7 +66,7 @@ const MyEvents = () => {
   const handleUpdateEvent = async (eventId, updatedEvent) => {
     try {
       await axios.put(
-        `http://localhost:8000/api/events/${eventId}`,
+        `https://reminderly.onrender.com/api/events/${eventId}`,
         updatedEvent
       );
       setEvents(

@@ -2,7 +2,6 @@
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import "./EventDisplay.css";
-import { useNavigate } from "react-router-dom";
 
 // Function to dynamically set colors based on tag and past/future status
 const getEventStyle = (tag, isPastEvent) => {
