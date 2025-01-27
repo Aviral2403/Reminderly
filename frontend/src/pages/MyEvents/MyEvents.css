@@ -1,0 +1,157 @@
+
+  .my-events {
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    background-color: #181e27;
+    overflow: hidden;
+  }
+  
+  h1 {
+    text-align: center;
+    color: whitesmoke;
+  }
+  
+  .events-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+  
+  .no-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .no-events p{
+    color: whitesmoke;
+    font-size: clamp(1.5rem,1cqi,1.8rem);
+  }
+
+  .message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin:auto;
+    color: white;
+    font-size: clamp(2.5rem,2cqi,3.5rem);
+  }
+  
+  @media (min-width: 768px) {
+    .events-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 events per row on medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .events-list {
+      grid-template-columns: repeat(3, 1fr); /* Max 3 events per row on large screens */
+    }
+  }
+  
+  
+
+  .edit-form {
+    margin-top: 2rem;
+    background-color: #2b3542; /* Dark background color */
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Spacing between form elements */
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto; /* Center form horizontally */
+    color: white; /* White text color */
+  }
+
+  .edit-form textarea {
+    background-color: #3e495f; 
+    color: #f0f0f0; /* Light text inside inputs */
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: none; /* Remove input borders */
+    font-size: 1rem;
+    width: 100%; /* Full width of the parent */
+    margin-bottom: 1rem;
+    
+    /* Add min and max width/height */
+    min-width: 100%; /* Ensures it doesn't shrink below the parent width */
+    max-width: 100%; /* Keeps it at the parent's full width */
+    min-height: 150px; /* Minimum height of the textarea */
+    max-height: 300px; /* Maximum height of the textarea */
+    resize: none; /* Allows users to resize vertically only */
+}
+  
+  .edit-form input,
+  .edit-form textarea,
+  .edit-form select {
+    background-color: #3e495f; /* Dark input fields */
+    color: #f0f0f0; /* Light text inside inputs */
+    padding: 0.9rem;
+    border-radius: 8px;
+    border: none; /* Remove input borders */
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .edit-form input::placeholder,
+  .edit-form textarea::placeholder {
+    color: #b3b3b3; /* Placeholder text color */
+  }
+  
+  .form-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  .form-buttons button {
+    background-color: #ff4d4d; /* Red button color */
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .form-buttons button:hover {
+    background-color: #e60000; /* Darker red on hover */
+  }
+  
+  .edit-form .form-input-tag select {
+    background-color:#3e495f;
+    color: #f0f0f0;
+  }
+  
+  .form-buttons button:last-child {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+  }
+  
+  .form-buttons button:last-child:hover {
+    background-color: #2e2e2e;
+    border: 1px solid #ff4d4d;
+  }
+  
+  @media (max-width: 768px) {
+    .edit-form {
+      width: 95%; /* Full width for smaller screens */
+    }
+  }
+

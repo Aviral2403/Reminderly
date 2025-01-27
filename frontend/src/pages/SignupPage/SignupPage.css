@@ -1,0 +1,240 @@
+/* Register Page Background */
+.register-page {
+    background-color: #181e27;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Register Container */
+.register-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2d32;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 60vw;
+    margin: 15px;
+    border: 1px solid rgba(179, 179, 179, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.register-container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Close Button */
+.register-container .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.register-container .closebtn button {
+    color: #2a2a2a;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container .closebtn button:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+/* Title */
+.register-container h1 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.5rem; /* Base font size */
+    text-align: center; /* Center align text */
+    margin: 20px; /* Margin around the tagline */
+    padding: 10px; /* Padding for inner spacing */
+    color: #f9f8f8; /* Text color */
+  }
+
+/* Google Sign-in Button */
+.register-container .google-signin {
+    background-color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container .google-signin:hover {
+    background-color: #e05454;
+    color: whitesmoke;
+}
+
+/* Divider */
+.register-container .divider {
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #e63946;
+}
+.register-container .title{
+    margin-top: 25px;
+}
+
+/* Input Fields */
+.register-container input[type="email"],
+.register-container input[type="text"],
+.register-container input[type="password"] {
+    background-color: #40404b;
+    border: 1px solid rgba(159, 159, 159, 0.6);
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    width: 90%;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-container input:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 5px rgba(230, 57, 70, 0.7);
+    outline: none;
+}
+
+/* Register Button */
+.register-container .register-btn {
+    background-color: #e63946;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+}
+
+.register-container .register-btn:hover {
+    background-color: #c53030;
+}
+
+/* Forgot Password and Login Links */
+.register-container .forgot-password,
+.register-container .login {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.register-container .login {
+    margin-top: 20px;
+}
+
+.register-container .forgot-password:hover,
+.register-container .login:hover {
+    text-decoration: underline;
+}
+
+/* Error and Success Messages */
+.error-text {
+    color: #ef4444;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.success-text {
+    color: #38a169;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+/* Input Icon */
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-container input {
+    padding-left: 40px; /* Space for the icon */
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+}
+
+/* Media Queries */
+
+/* Tablets and Medium-sized Screens */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    .register-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .register-container .google-signin,
+    .register-container input,
+    .register-container .register-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .register-container .divider {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    .register-container {
+        padding: 15px;
+        max-width: 300px;
+    }
+
+    .register-container h1 {
+        font-size: 1.2rem;
+    }
+
+    .register-container .google-signin,
+    .register-container input,
+    .register-container .register-btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .register-container .divider {
+        font-size: 0.7rem;
+    }
+}

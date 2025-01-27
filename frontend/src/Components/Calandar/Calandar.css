@@ -1,0 +1,396 @@
+.calander-app{
+  width: 60%;
+  min-width: 90vmin;
+  aspect-ratio: 8/6;
+  background-color:#2f3847;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: .3rem solid #0f1319;
+  display: flex;
+  column-gap: 2.5rem;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.calander-app::after{
+  content: "";
+  position: absolute;
+  bottom: -6rem;
+  left: 50%;
+  transform: translate(-50%) rotateX(50deg);
+  width: 90%;
+  height: 10rem;
+  background-color: rgba(0,0,0,.5);
+  border-radius: 16rem;
+  filter: blur(2rem);
+
+}
+.calander{
+  width: 50%;
+
+}
+.heading{
+  font-size: clamp(2rem,3cqi,5rem);
+  color: rgb(225, 29, 72);
+  letter-spacing: .2rem;
+  padding-left: .8rem;
+
+}
+.navigate-date{
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  margin: 2rem 0;
+}
+.navigate-date h2{
+  font-size: clamp(1.5rem,1.5cqi,2rem);
+  color: whitesmoke;
+  padding-left: .8rem;
+
+}
+.all-event-heading{
+  display: none;
+}
+.buttons{
+  display: flex;
+  column-gap: .6rem;
+  margin-left: auto;
+}
+.buttons p{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: .2s,ease-in-out;
+
+}
+.buttons p:hover{
+  color: rgb(225, 29, 72);
+}
+
+.weekdays{
+  width: 100%;
+  display: flex;
+  margin: 1.5rem 0;
+  column-gap: .4rem;
+}
+.weekdays span{
+  width: calc(100%/7);
+  font-size: clamp(1.1rem,.1cqi,1.5rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(225, 29, 72);
+  display: flex;
+  justify-content: center;
+}
+
+.days{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.days span{
+  font-size: clamp(1rem,.8cqi,1.3rem);
+  width: calc(100%/7);
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  text-shadow:.1rem .3rem rgba(0,0,0,.2);
+
+}
+.current-day {
+  background-color: rgb(225, 29, 72);
+  border-radius: 50%;
+  box-shadow: 0 0 .2rem .2rem rgb(169, 66, 87);
+}
+.events{
+  width: 50%;
+  height: 100%;
+  padding: .5rem 0;
+}
+.event-heading{
+  color: rgb(225, 29, 72);
+  margin-bottom: .8rem;
+  font-size: clamp(1.5rem,1.5cqi,1.8rem);
+  display: flex;
+  justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.event-popup{
+  position:absolute;
+  top: 33%;
+  left: 1.5rem;
+  background-color: #212a35;
+  width: clamp(25rem,20cqi,35rem);
+  aspect-ratio: 10/9;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.5rem;
+}
+
+.time-input{
+  display: flex;
+  column-gap: .8rem;
+
+}
+.event-popup-time{
+  width: clamp(4rem,3cqi,5rem);
+  background-color: rgb(225, 29, 72);
+  font-size: clamp(1.2rem,1.2cqi,1.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem 0rem;
+  color: whitesmoke;
+  border-radius: .2rem;
+}
+
+.time-input input{
+  background-color: transparent;
+  border: none;
+  border-top: .1rem solid rgb(225, 29, 72);
+  border-bottom: .1rem solid rgb(225, 29, 72);
+  width: clamp(4rem,3cqi,5rem);
+  height:2rem ;
+  text-align: center;
+  font-size: clamp(1.2rem,1.2cqi,1.5rem);
+  color:  rgb(225, 29, 72);
+}
+
+.time-input input[type="number"]::-webkit-inner-spin-button,
+.time-input input[type="number"]::-webkit-outer-spin-button{
+  appearance:none;
+}
+.event-popup textarea{
+  resize: none;
+  background-color: #2e3a49;
+  border-radius: .5rem;
+  color: rgb(145, 182, 206);
+  margin-left: .1rem;
+  border: none;
+  padding-top: .1rem;
+
+}
+.event-popup .popup-desc{
+  width: clamp(14rem,14cqi,18rem);
+  aspect-ratio: 5/2;
+}
+.event-popup .popup-title{
+  width: clamp(14rem,14cqi,18rem);
+}
+.event-popup select{
+  background-color: #2e3a49;
+  border-radius: .5rem;
+  padding: .2rem .2rem;
+  color: rgb(145, 182, 206);
+
+
+}
+.event-popup textarea::placeholder{
+  padding: .2rem .2rem;
+  color: rgb(145, 182, 206);
+}
+.event-popup textarea:focus{
+  border: none;
+  outline: none;
+  border: 1px solid rgb(145, 182, 206);
+}
+.event-popup select:focus{
+  outline: none;
+}
+.event-popup textarea:focus::placeholder{
+  color: transparent;
+}
+.event-popup-btn{
+  width: clamp(10rem,10cqi,15rem);
+  height: 1.5rem;
+  cursor: pointer;
+  background-color: rgb(225, 29, 72);
+  outline: none;
+  border: none;
+  color: whitesmoke;
+  border-radius: .2rem;
+}
+.event-popup-btn:active{
+  transform: translateY(.2rem);
+}
+.close-event-popup{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  border: none;
+  color: whitesmoke;
+  background-color: rgb(225, 29, 72);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: .3rem;
+
+}
+.close-event-popup:active{
+  transform: translateY(.2rem);
+
+
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container p{
+  color: whitesmoke;
+}
+
+.main-container img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+.all-events{
+  text-decoration: none;
+  color: rgb(225, 29, 72);
+  display: flex;
+}
+.all-events a{
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+.arrow{
+  padding: .1rem 0;
+}
+.all-events:hover{
+  color: whitesmoke;
+  
+}
+
+@media (min-width: 768px) {
+  .main-container img {
+    max-width: 80%; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-container img {
+    max-width: 60%; 
+  }
+}
+
+@media (max-width:850px){
+  .calander-app{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    aspect-ratio: auto;
+  }
+  .calander{
+    width: 100%;
+    margin: auto;
+  }
+  .events{
+    width: 80%;
+    margin: auto;
+  }
+  .navigate-date{
+    margin: 1rem 0;
+  }
+  .weekdays{
+    margin: 1rem 0;
+  }
+  .event-popup{
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    aspect-ratio: auto;
+    row-gap: 1rem;
+    padding: 1rem;
+
+  }
+  .close-event-popup{
+    top: .5rem;
+    right: .5rem;
+  }
+}
+@media (max-width:576px){
+  .calander-app{
+    aspect-ratio: auto;
+  }
+  .calander{
+    width: 100%;
+  }
+  .event-popup{
+    width: 80%;
+  }
+  .events{
+    width: 100%;
+  }
+}
+
+@media (max-width:425px){
+  .event-popup{
+    width: 90%;
+  }
+  
+  .events{
+    width: 100%;
+  }
+
+  .main-container{
+    display: none;
+  }
+  .event-popup{
+    width: 95%;
+  }
+  .navigate-date{
+    display: flex;
+    flex-direction: column;
+  }
+  .navigate-date .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: .8rem;
+    margin-right: 0;
+  }
+  .weekdays span{
+    font-size: clamp(.8rem,.6cqi,1.2rem);
+    
+  }
+  .event-heading{
+    display: none;
+  }
+  .all-event-heading{
+    display: contents;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(225, 29, 72) ;
+  }
+  
+  .all-event-heading a {
+    text-decoration: none; /* Ensure that the anchor tag has no underline */
+    color: inherit;
+  }
+}
+
+
