@@ -11,7 +11,7 @@ require("dotenv").config();
 
 app.use(
   cors({
-    origin: ["http://localhost:5174", "http://localhost:5173","http://localhost:5175","https://reminderly.onrender.com"],
+    origin: ["http://localhost:5174", "http://localhost:5173","http://localhost:5175"],
     credentials: true,
     exposedHeaders: ["Authorization"],
   })
